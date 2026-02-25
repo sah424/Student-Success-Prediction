@@ -1,1 +1,58 @@
 # Student-Success-Prediction
+
+I made a project named - "Student Success Rate" based on my knowledge of Data Analysis, Python Libraries,  ML Libraries,  Scikit Learn
+
+Step by Step ML Project :
+
+Step 1 : Load & Understand Data, Checking Data 
+Using : 
+df = pd.read_csv("File_Name")
+df.head()
+df.shape()
+df.info()
+df.describe()
+df.dtypes()
+df.isnull().sum()
+
+
+Step 2 : Transform Categorical Data to Numerical Data
+Using :
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+le.fit_transform(df['Column Name'])
+
+
+Step 3 : Feature Scaling (Standarize features to improve model performance)
+Using :
+from sklearn.preprocessing import Standard, LabelEncoder
+scaler = StandardScaler()
+scaler.fit_transform(df['Column Name'])
+
+Step 4 : Split the data (Divide the data set into training, validation & test sets)
+Using :
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.2, random_state = 42)
+
+Step 5 : Train the Model (train LogisticRegression Model to Train The Model)
+Using :
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+Step 6 : Making Prediction (Use the trained the data to generate predictions on new data)
+Using :
+from sklearn.metrics import classification_report
+y_pred = model.predict(X_test)
+classification_report(y_test,y_pred)
+
+Step 7 : Evaluate the Model (Access the model data using appropriate metrics)
+Using :
+from sklearn.metrics import confusion_matrix
+conf_matrix = confusion_matrix(y_test,y_pred)
+
+Step 8 : Visualization (Create Visualization to communicate findings & inshights)
+Used Matplotlib functionality 
+
+Step 9 : Improvement/Experiment 
+
+
