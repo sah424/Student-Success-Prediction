@@ -56,3 +56,6 @@ Used Matplotlib functionality
 Step 9 : Improvement/Experiment 
 
 
+I have completed this machine learning project  Student Success Prediction, achieving 100% model accuracy through effective data preprocessing, feature engineering, model training, and evaluation. 
+
+
